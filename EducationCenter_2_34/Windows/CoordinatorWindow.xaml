@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EducationCenter_2_34.Windows"
         mc:Ignorable="d"
-        Title="CoordinatorWindow" Height="450" Width="800">
-    <Grid>
+        Title="CoordinatorWindow" Height="720" Width="1280" WindowStartupLocation="CenterScreen">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
         
+        
+        <!--Поиск и фильтрация-->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Поиск:"/>
+            <TextBox Name="SerachTb" Grid.Column="2"/>
+            <TextBlock Text="Фильтр" Grid.Column="4"/>
+            <ComboBox Name="FilterByRoleCmb" Grid.Column="6"/>
+        </Grid>
+
+        <!--Список, форма добавления/редактирования-->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+
+
+            <ListView Name="UserLv">
+                
+            </ListView>
+        </Grid>
     </Grid>
 </Window>
