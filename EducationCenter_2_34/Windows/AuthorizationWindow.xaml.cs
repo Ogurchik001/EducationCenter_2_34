@@ -87,17 +87,7 @@ namespace EducationCenter_2_34.Windows
                     {
                         MessageBox.Show("Капча собрана неверно. Попробуйте еще раз", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
-                    failedAttempCount++;
-
-                    if (failedAttempCount >= 3)
-                    {
-                        user.Emplyee.IsActive = false;
-                        context.SaveChanges();
-
-                        MessageBox.Show("Вы заблокированы, обратитесь к координатору", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-
-                    }
-
+                    failedAttempCount++; 
                     return;
                 }
 
