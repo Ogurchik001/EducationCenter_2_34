@@ -11,8 +11,6 @@ public partial class User
 
     public string? Password { get; set; }
 
-    public bool? IsBlocked { get; set; }
-
     public int RoleId { get; set; }
 
     public int EmplyeeId { get; set; }
