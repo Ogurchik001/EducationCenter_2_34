@@ -1,0 +1,27 @@
+﻿<Window x:Class="EducationCenter_2_34.Windows.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EducationCenter_2_34.Windows"
+        mc:Ignorable="d"
+                        Title="Авторизация" Height="320" Width="320" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="35" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <TextBlock Text="Логин" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="25" Name="LoginTbl"/>
+        <TextBox Grid.Row="1" HorizontalAlignment="Left" FontSize="25" Name="LoginTb" Width="259"/>
+        <TextBlock Grid.Row="3" Text="Пароль" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="25" Name="PasswordTbl"/>
+        <PasswordBox Grid.Row="4" HorizontalAlignment="Left" FontSize="25" Name="PasswordPb" Width="259"/>
+        <CheckBox Grid.Row="5" Content="Запомнить меня?" Name="PasswordCb" />
+        <Button Grid.Row="7" Content="Войти" Name="LoginBtn" FontSize="25" Click="LoginBtn_Click" />
+    </Grid>
+</Window>
