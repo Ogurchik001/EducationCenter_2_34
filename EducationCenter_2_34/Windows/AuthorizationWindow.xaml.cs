@@ -1,4 +1,5 @@
 ﻿using EducationCenter_2_34.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -42,7 +43,7 @@ namespace EducationCenter_2_34.Windows
                 return;
             }
 
-            User user = context.Users.FirstOrDefault(u => u.Login == LoginTb.Text && u.Password == PasswordPb.Password);
+            User? user = context.Users.Include(u => u.Emplyee).FirstOrDefault(u => u.Login == LoginTb.Text && u.Password == PasswordPb.Password);
 
             if (user == null)
             {

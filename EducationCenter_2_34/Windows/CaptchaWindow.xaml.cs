@@ -18,6 +18,9 @@ namespace EducationCenter_2_34.Windows
     public partial class CaptchaWindow : Window
     {
         Image? selectedFragment;
+
+
+
         public CaptchaWindow()
         {
             InitializeComponent();
